@@ -1,0 +1,1 @@
+make -f Makefile MODE=release NAME=clox SOURCE_DIR=./
