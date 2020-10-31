@@ -91,7 +91,7 @@ static void advance()
     for (;;)
     {
         parser.current = scanToken();
-        if (parser.current.type == TOKEN_ERROR)
+        if (parser.current.type != TOKEN_ERROR)
             break;
 
         errorAtCurrent(parser.current.start);

@@ -1,1 +1,1 @@
-make -f Makefile MODE=release NAME=clox SOURCE_DIR=./
+make -f Makefile MODE=debug NAME=clox SOURCE_DIR=./

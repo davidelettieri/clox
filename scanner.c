@@ -105,6 +105,7 @@ static void skipWhiteSpace()
         case '\n':
             scanner.line++;
             advance();
+            break;
         case '/':
             if (peekNext() == '/')
             {
