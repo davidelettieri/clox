@@ -5,8 +5,6 @@
 #include "common.h"
 #include "value.h"
 
-#include <stdint.h>
-
 typedef enum
 {
     OP_CONSTANT,

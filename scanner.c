@@ -58,7 +58,7 @@ static char peekNext()
 
 static bool match(char expected)
 {
-    if (IsAtEnd())
+    if (isAtEnd())
         return false;
 
     if (*scanner.current != expected)
@@ -187,14 +187,14 @@ static Token number() {
 
 static Token string()
 {
-    while (peek() != '"' && !IsAtEnd())
+    while (peek() != '"' && !isAtEnd())
     {
         if (peek() == '\n')
             scanner.line++;
         advance();
     }
 
-    if (IsAtEnd())
+    if (isAtEnd())
     {
         return errorToken("Unterminated string.");
     }

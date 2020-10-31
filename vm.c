@@ -1,8 +1,10 @@
 #include "common.h"
 #include "compiler.h"
 #include "debug.h"
+#include "chunk.h"
 #include "vm.h"
 #include <stdio.h>
+#include <stdint.h>
 
 VM vm;
 
@@ -106,7 +108,7 @@ InterpretResult interpret(const char *source)
         return INTERPRET_COMPILE_ERROR;
     }
 
-    vm.chunck = &chunck;
+    vm.chunk = &chunk;
     vm.ip = vm.chunk->code;
 
     InterpretResult result = run();
